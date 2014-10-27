@@ -139,11 +139,23 @@ Si (6) existe, es decir (5) y (6) son iguales, decimos que $f$ es integrable res
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}{Integral de Riemann-Stieltjes}
 
-\begin{definition}
+\begin{definition}[5]
 Decimos que la partición $P^*$ es un \textit{refinamiento} de $P$ si $P^* \supset P$. Dadas dos particiones $P_1$ y $P_2$ decimos que $P^*$ es su \textit{refinamiento común} si $P^* = P_1 \cup P_2$
 \end{definition}
+
+\begin{theorem}[1]
+Si $P^*$ es un refinamiento de $P$, entonces
+
+\begin{equation}
+	L(P, f, \alpha) \leq L(P^*, f, \alpha)
+\end{equation}
+y
+\begin{equation}
+	U(P^*, f, \alpha) \leq U(P, f, \alpha)
+\end{equation}
+\end{theorem}
 
 \end{frame}
 
