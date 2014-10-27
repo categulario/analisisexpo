@@ -210,4 +210,41 @@ Suponga que $f \in \mathcal{R}(\alpha)$ en $[a, b]$, $m \leq f \leq M$, $\phi$ e
 
 \end{frame}
 
+\begin{frame}[allowframebreaks]{Propiedades de la integral}
+\begin{enumerate}
+	\item Si $f_1, f_2 \in \mathcal{R}(\alpha)$ en $[a, b]$ entonces
+	\[
+		f_1 + f_2 \in \mathcal{R}(\alpha),
+	\]
+	$cf \in \mathcal{R}(\alpha)$ para cualquier constante $c$, y
+	\[
+		\begin{array}{rcl}
+			\int_a^b (f_1 + f_2) d\alpha & = & \int_a^b f_1 d\alpha + \int_a^b f_2 d\alpha,\\
+			\int_a^b cf\,d\alpha & = & c \int_a^b f\,d\alpha.
+		\end{array}
+	\]
+	\item Si $f_1(x) \leq f_2(x)$ en $[a, b]$ entonces
+	\[
+		\int_a^b f_1\,d\alpha \leq \int_a^b f_2\,d\alpha
+	\]
+	\item Si $f \in \mathcal{R}(\alpha)$ en $[a, b]$ y $a < c < b$, entonces $f \in \mathcal{R}(\alpha)$ en $[a, c]$ y en $[c, b]$ y
+	\[
+		\int_a^c f\,d\alpha + \int_c^b f\,d\alpha = \int_a^b f\,d\alpha
+	\]
+	\item Si $f \in \mathcal{R}(\alpha)$ y $|f(x)| \leq M$ en $[a, b]$ entonces
+	\[
+		|\int_a^b f\,d\alpha| \leq M[\alpha(b) - \alpha(a)]
+	\]
+	\item Si $f \in \mathcal{R}(\alpha_1)$ y $f \in \mathcal{R}(\alpha_2)$, entonces $f \in \mathcal{R}(\alpha_1 + \alpha_2)$ y
+	\[
+		\int_a^b f\,d(\alpha_1 + \alpha_2) = \int_a^b f\,d\alpha_1 + \int_a^b f\,d\alpha_2 ;
+	\]
+	si $f \in \mathcal{R}(\alpha)$ y $c$ es una constante positiva, entonces $f \in \mathcal{R}(c\alpha)$ y
+	\[
+		\int_a^b f\,d(c\alpha) = c \int_a^b f\,d\alpha.
+	\]
+\end{enumerate}
+\end{frame}
+
 \end{document}
+
