@@ -34,7 +34,7 @@ Sean
 \begin{equation*}
 	\Delta x_i = x_i - x_{i-1} (i = 1, \dots, n)
 \end{equation*}
-\end{definition}
+\end{definition}[1]
 
 \begin{center}
 \includegraphics[scale=1]{img/particion.png}
@@ -44,6 +44,7 @@ Sean
 
 \begin{frame}{Integral de Riemann}
 
+\begin{definition}[2]
 Sea $f$ es una función real acotada definida en $[a, b]$. Para cada partición $P$ de $[a, b]$ definimos
 
 \begin{equation*}
@@ -57,7 +58,7 @@ Sea $f$ es una función real acotada definida en $[a, b]$. Para cada partición 
 y finalmente
 \begin{equation}
 	\begin{array}{rcl}
-		\bar{\int}_a^b f\,dx & = & \inf U(P, f)
+		\overline{\int}_a^b f\,dx & = & \inf U(P, f)
 	\end{array}
 \end{equation}
 \begin{equation}
@@ -67,16 +68,74 @@ y finalmente
 \end{equation}
 
 Las partes izquierdas de estas ecuaciones son llamadas \textit{integral superior} e \textit{integral inferior} de $f$ sobre $[a, b]$ respectivamente.
+\end{definition}
 
 \end{frame}
 
 \begin{frame}{Integral de Riemann}
 
+\begin{definition}[3]
 Si las integrales \textit{superior} e \textit{inferior} son iguales entonces decimos que $f$ es \textit{riemann-integrable} en $[a, b]$ y diremos que $f\in \mathcal{R}$ donde $\mathcal{R}$ denota el conjunto de funciones \textit{riemann-integrables} y denotaremos el valor de (1) y (2) como
 
 \begin{equation}
 	\int_a^b f(x)\,dx
 \end{equation}
+
+A lo cual llamaremos \textit{integral de riemman de $f(x)$}.
+\end{definition}
+
+\end{frame}
+
+\begin{frame}{Integral de Riemann-Stieltjes}
+
+Sea $\alpha$ una función monótona creciente definida en $[a, b]$ (y por tanto, acotada). Para cada partición $P$ escribimos
+
+\[
+	\Delta \alpha_i = \alpha(x_i) - \alpha(x_{i-1}) \qquad \Delta\alpha_i \geq 0
+\]
+
+Para cualquier función acotada en $[a, b]$ definimos
+
+\[
+	\begin{array}{rcl}
+		U(P, f, \alpha) & = & \sum_{i=1}^n M_i \Delta \alpha_i, \\
+		L(P, f, \alpha) & = & \sum_{i=1}^n m_i \Delta \alpha_i,
+	\end{array}
+\]
+
+Done $M_i$ y $m_i$ son lo mismo que en la definición (2) y finalmente 
+
+\begin{equation}
+	\overline{\int}_a^b f\,d\alpha = \inf U(P, f, \alpha),
+\end{equation}
+
+\begin{equation}
+	\underline{\int}_a^b f\,d\alpha = \sup L(P, f, \alpha),
+\end{equation}
+
+\end{frame}
+
+\begin{frame}{Integral de Riemann-Stieltjes}
+
+\begin{definition}[4]
+
+Si los términos de (4) y (5) son iguales, denotaremos su valor común como
+
+\begin{equation}
+	\int_a^b f\,d\alpha
+\end{equation}
+
+ó
+
+\begin{equation}
+	\int_a^b f(x)\,d\alpha(x).
+\end{equation}
+
+Que es la \textit{integral de rieman-stieltjes} de $f$ respecto de $\alpha$ sobre $[a, b]$.
+
+Si (6) existe, es decir (5) y (6) son iguales, decimos que $f$ es integrable respecto a $\alpha$ y escribimos $f \in \mathcal{R}(\alpha)$.
+
+\end{definition}
 
 \end{frame}
 
