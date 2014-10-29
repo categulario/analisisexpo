@@ -247,7 +247,7 @@ Suponga que $f \in \mathcal{R}(\alpha)$ en $[a, b]$, $m \leq f \leq M$, $\phi$ e
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}[allowframebreaks]
 
 \begin{theorem}[9]
 Si $f, g \in \mathcal{R}(\alpha)$ en $[a, b]$ entonces
@@ -266,6 +266,43 @@ La \textit{función escalón unitario} $I$ está definida como
 	\end{cases}
 \]
 \end{definition}
+
+\begin{theorem}
+Si $a < s < b$, $f$ es acotada en $[a, b]$ y continua en $s$, y $\alpha(x) = I(x-s)$, entonces
+\[
+	\int_a^b f\,d\alpha = f(s).
+\]
+\end{theorem}
+
+\begin{theorem}
+Suponga que $c_n \leq 0$ para $n = 1, 2, 3, \dots$, y que $\sum c_n$ converge. Sea además ${S_n}$ una sucesión de puntos distintos en $(a, b)$ y
+\begin{equation}
+	\alpha(x) = \sum_{n=1}^{\infty} c_n I(x-s_n).
+\end{equation}
+Si $f$ es continua en $[a, b]$. Entonces
+\begin{equation}
+	\int_a^b f\,d\alpha = \sum_{n=1}^{\infty} c_n f(s_n).
+\end{equation}
+\end{theorem}
+
+\begin{theorem}
+Asuma que $\alpha$ incrementa de forma monótona  y $\alpha' \in \mathcal{R}$ en $[a, b]$. Sea $f$ una función real acotada en $[a, b]$.
+Entonces $f \in \mathcal{R}(\alpha)$ si y solo si $f\alpha' \in \mathcal{R}$. En ese caso
+\begin{equation}
+	\int_a^b f\,d\alpha = \int_a^b f(x)\alpha'(x) dx.
+\end{equation}
+\end{theorem}
+
+\begin{theorem}{Cambio de variable}
+Suponga que $\phi$ es una función continua estrictamente creciente que mapea el intervalo $[A, B]$ en $[a, b]$. Suponga que $\alpha$ es monótona creciente en $[a, b]$ y $f \in \mathcal{R}(\alpha)$ en $[a, b]$. Defínase $\beta$ y $g$ en $[A, B]$ como
+\begin{equation}
+	\beta(y) = \alpha(\phi(y)), \qquad g(y) = f(\phi(y)).
+\end{equation}
+Entonces $g \in \mathcal{R}(\beta)$ y
+\begin{equation}
+	\int_A^B g\,d\beta = \int_a^b f\,d\alpha.
+\end{equation}
+\end{theorem}
 
 \end{frame}
 
