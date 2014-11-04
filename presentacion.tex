@@ -1,4 +1,4 @@
-\documentclass[11pt]{beamer}
+\documentclass[10pt]{beamer}
 \usetheme{CambridgeUS}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
@@ -23,22 +23,23 @@
 % \tableofcontents
 % \end{frame}
 
-\begin{frame}{Particiones}
+\begin{frame}[allowframebreaks]{Particiones}
 
 \begin{definition}
 Sea $[a, b]$ intervalo. Una \textit{partición} de $[a, b]$ es un conjunto de puntos $x_0, x_1,..., x_n$ tales que
-\begin{equation*}
+\[
 	a = x_0 \leq x_1 \leq \dots \leq x_n = b
-\end{equation*}
+\]
 Sean
-\begin{equation*}
+\[
 	\Delta x_i = x_i - x_{i-1} (i = 1, \dots, n)
-\end{equation*}
-\end{definition}[1]
+\]
+\end{definition}
 
-\begin{center}
-\includegraphics[scale=1]{img/particion.png}
-\end{center}
+\begin{figure}
+	\includegraphics[width=\textwidth]{img/particion.png}
+	\caption{Una partición arbitraria}
+\end{figure}
 
 \end{frame}
 
@@ -275,7 +276,7 @@ Si $a < s < b$, $f$ es acotada en $[a, b]$ y continua en $s$, y $\alpha(x) = I(x
 \end{theorem}
 
 \begin{theorem}
-Suponga que $c_n \leq 0$ para $n = 1, 2, 3, \dots$, y que $\sum c_n$ converge. Sea además ${S_n}$ una sucesión de puntos distintos en $(a, b)$ y
+Suponga que $c_n \geq 0$ para $n = 1, 2, 3, \dots$, y que $\sum c_n$ converge. Sea además ${S_n}$ una sucesión de puntos distintos en $(a, b)$ y
 \begin{equation}
 	\alpha(x) = \sum_{n=1}^{\infty} c_n I(x-s_n).
 \end{equation}
@@ -292,6 +293,8 @@ Entonces $f \in \mathcal{R}(\alpha)$ si y solo si $f\alpha' \in \mathcal{R}$. En
 	\int_a^b f\,d\alpha = \int_a^b f(x)\alpha'(x) dx.
 \end{equation}
 \end{theorem}
+
+Este teorema nos permite relacionar la integral de Stieltjes con la integral de Riemann.
 
 \begin{theorem}{Cambio de variable}
 Suponga que $\phi$ es una función continua estrictamente creciente que mapea el intervalo $[A, B]$ en $[a, b]$. Suponga que $\alpha$ es monótona creciente en $[a, b]$ y $f \in \mathcal{R}(\alpha)$ en $[a, b]$. Defínase $\beta$ y $g$ en $[A, B]$ como
